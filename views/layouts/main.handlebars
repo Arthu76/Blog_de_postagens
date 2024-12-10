@@ -1,0 +1,64 @@
+<html lang='pt-br'>
+  <head>
+    <meta charset='UTF-8' />
+    <link rel='stylesheet' href='/css/bootstrap.css' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Blog NodeJS</title>
+  </head>
+  <body>
+    {{>_navbar}}
+    
+    <div class="container mt-4">
+      {{#if error}}
+        <div class="alert alert-danger">{{error}}</div>
+      {{/if}}
+      {{>_msg}}
+      {{{body}}}
+    </div>
+   
+  </body>
+  <script
+    src='https://code.jquery.com/jquery-3.2.1.slim.min.js'
+    integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN'
+    crossorigin='anonymous'
+  ></script>
+  <script
+    src='https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js'
+    integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q'
+    crossorigin='anonymous'
+  ></script>
+  <script src='/js/bootstrap.js'></script>
+  <style>
+
+    .linkCat {
+      text-decoration: none;
+      color: inherit; 
+      
+    }
+    .linkCat:hover{
+      text-decoration: none; 
+      color: rgb(130, 130, 130);
+      transition: color 0.5s 
+    }
+
+  /* Linha a frente das Categorias */
+    .line-container {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Faz a linha ocupar todo o espaço disponível */
+  }
+
+    .line-text {
+    margin-right: 10px; /* Espaço entre o texto e a linha */
+    white-space: nowrap; /* Garante que o texto não quebre */
+    
+  }
+
+    .line {
+    flex-grow: 1; /* Faz a linha se esticar */
+    height: 0.01rem;
+    background-color: rgb(193, 193, 193); /* Cor da linha */
+  }
+  </style>
+</html>
